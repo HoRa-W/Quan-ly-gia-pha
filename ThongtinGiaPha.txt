@@ -1,0 +1,30 @@
+Nguyen Minh Phong 
+Unknow
+74
+male
+1
+Ngo Ba Kha
+Nguyen Minh Phong
+65
+male
+2
+Le Thanh Thuy
+Nguyen Minh Phong
+60
+female
+2
+Nguyen Xuan Hop
+Nguyen Minh Phong
+55
+male
+2
+Le Minh Tan
+Ngo Ba Kha
+43
+male
+3
+Do Minh Nhat
+Le Thanh Thuy
+35
+male
+3
