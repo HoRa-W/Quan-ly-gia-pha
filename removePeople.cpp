@@ -32,22 +32,34 @@ int remove_After_Q(GiaPha& Giapha, Node* q)
 	return 0;
 }
 
-int remove_person(GiaPha& Giapha, Node* person)
+bool remove_person(GiaPha& Giapha, Node* person)
 {
-	if (person != NULL)
+	Node* p = new Node;
+	if (Giapha.firstChild == person)
 	{
-
+		remove_first(Giapha);
+		return 1;
+	}
+	for (Node* k = Giapha.firstChild; k != NULL; k = k->nextPerson)
+	{
+		if (k->data.HoTen == person->data.HoTen)
+		{
+			p->nextPerson = k->nextPerson;
+			delete k;
+			return 1;
+		}
+		//gan node p bang node k de node p luon la node dung truoc node k
+		p = k;
 	}
 	return 0;
 }
 
 void destroy_giapha(GiaPha& Giapha)
 {
-	Person x;
 	Node* node = Giapha.firstChild;
 	while (node != NULL)
 	{
-		remove_first(Giapha, x);
+		remove_first(Giapha);
 		node = Giapha.firstChild;
 	}
 	Giapha.lastChild = NULL;
